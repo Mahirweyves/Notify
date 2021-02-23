@@ -1,0 +1,108 @@
+ <li class="nav-item dropdown btn-primary mt-4 has text-dark">
+        <strong class="nav-link dropdown-toggle has text-white" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Search by category</strong>
+        <div class="dropdown-menu has text-center" aria-labelledby="dropdown01">
+    
+       <div class="mr-md-12">
+       <div class="card">
+       <div class="card-header">
+          Categories
+        </div>
+        <ul class="list-group has text-left bg-dark">
+
+        <!--<#% @categories.each do |category| %>-->
+
+         <!--<li>
+          <#%= link_to category.category, trades_path(:cate => category.id), class: "has text-white" %>
+
+         <span class="badge badge-primary badge-pill has text-dark bg-warning"><#%= category.trades.count %></span>
+         </li>  
+        <#% end %>-->
+        </ul></li>
+        </div>
+        </div></div></div>
+
+  <%= yield (:body_class) %>
+    <% if flash[:notice] %>
+      <div class="btn btn-sm btn-success notification is-success global-notification mt-3">
+        <p class="notice"><%= notice %></p>
+      </div>
+    <% end %>
+
+    <% if flash[:alert] %>
+    <div class="btn btn-sm btn-danger notification is-danger global-notification">
+      <p class="alert"><%= alert %></p>
+    </div>
+    <% end %>
+    
+  <div class="container bg-light">
+    <div class="rows">
+      <div class="col-md-8 mt-5">
+      
+      <strong><h1 class="title pb3 border-bottom col-md-7 text-center has text-dark mt-5">Product info</h1></strong>
+      <!--<h2 class="lead">Category: <#%= @trade.category.category %></h2> -->      
+
+    <h5 class="title is-1">Product name: <%= @product.name %></h5>
+    <div>
+      <strong><p class=" col-md-4 text-primary">Posted <%= time_ago_in_words(@product.created_at) %> ago</p></strong>
+
+      
+      <div class="pt1 pb3 border mb-3 pl-2"><strong class="border-bottom">Product description: </strong><%= sanitize markdown_to_html(@product.description) %>
+      </div>
+    
+
+    <div class="row">
+      <span class="mb-4 pl-4 col-md-6 has text-warning"> 
+        <div class="card-content pt-1 pb-2 lead">
+        <div>Posted by: <%= @product.company_name %><a class="mt-1 mb-1 row text-right"></a>Address: <%= @product.address %><a class="mt-1 mb-1 row text-right"></a>Contacts: <%= @product.telephone_number %><a class="mt-1 row text-right"></a>Price: <%= @product.price %><a class="mt-1 row text-right"></a><!--</a>Website link: <#%= auto_link(@product.link) %>--></div></div></div>
+      </span>
+    </div></div>
+
+        <iframe class="bg-dark border ml-lg-4 mt-3 mb-2" width="480" height="320" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDwPWqzUvZRkWVpkF52SD7uctfnLjDADdw&q=<%= @product.address.to_param %>" allowfullscreen></iframe>
+      
+    <% if @product.images.attached? %>
+      
+      <div class="row is-multiline pt-4 pl-5 mb-5">
+        <% @product.images.each do |image| %>
+          <div class="column is-one-third ">
+             <div style="width:380px; height:180px;">
+            <%= image_tag image.variant(resize: "320x160>") %>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    <% end %>
+
+
+  <div class="content">
+  <div class="rows text-center">
+
+    <!--<#% if product_author(@product) || has_role?(:admin) %>-->
+    <div class="row col-md-3">
+      <div class="pa3 mb4 pb-2 border-radius-3 mb-3">
+        <p class="f6 pb1 has text-warning">Author actions:</p>
+
+        <div class="button-group">
+          <%= link_to "Edit product: #{@product.name}", edit_product_path(@product), class: "btn btn-sm btn btn-secondary mb-2 ml-3 mr-1 " %>
+          <%= link_to "Back", products_path, class: " btn btn-sm btn btn-primary mb-2  mr-3" %>
+          <%= button_to 'delete this product?', @product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-sm btn btn-danger mb-2" %>
+        </div>
+      </div></div>
+    <#% end %>
+
+
+    <!--div class="row">
+    <div class="ml-md-auto col-md-8">
+      <div class="border mr-5 col-sm-9 mt-3 pt-2 pb-2">
+     <button class="btn btn-info text-uppercase mt-3 mb-3">Call <#%=@product.user.name %></button>
+     <button class="btn btn-info mt-3 mb-3" data-toggle="modal" data-target="#contact-modal">Email <#%=@product.user.name %></button>
+   </div></div></div-->
+    
+
+     
+   
+
+       
+    
+</div></div>
+</div></div></div>
+

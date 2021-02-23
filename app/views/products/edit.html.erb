@@ -1,0 +1,30 @@
+<li class="nav-item dropdown btn-primary mt-4 has text-dark">
+        <strong class="nav-link dropdown-toggle has text-white" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Search by category</strong>
+        <div class="dropdown-menu has text-center" aria-labelledby="dropdown01">
+    
+       <div class="mr-md-12">
+       <div class="card">
+       <div class="card-header">
+          Categories
+        </div>
+        <ul class="list-group has text-left bg-dark">
+
+        <% @categories.each do |category| %>
+
+         <li>
+          <%= link_to category.category, trades_path(:cate => category.id), class: "has text-white" %>
+
+         <span class="badge badge-primary badge-pill has text-dark bg-warning"><%= category.trades.count %></span>
+         </li>  
+        <% end %>
+        </ul></li>
+        </div>
+        </div></div></div>
+
+<div class="col-md-8 mt-5 mb-5">
+
+<h1 class="title is-3 text-center">Editing Product</h1>
+
+<%= render 'form', trade: @trade %>
+</div>
+

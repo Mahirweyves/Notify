@@ -1,0 +1,82 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require social-share-button 
+ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'candara', sans-serif;
+}
+
+.wrapper {
+  width: 90%;
+  marging: 0 auto;
+}
+
+.skinny_wrapper {
+  width: 80%;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.wrapper_padding{
+  padding: 4ren 0;
+}
+
+.navbar {
+  background: #000075;
+  height: 90px;
+  margin: 0; 
+  padding: 0;
+ 
+}
+
+
+.row{
+  background: #000059;
+  color: gold;
+}
+
+.jumbotron{
+   background: #000059;
+   color: gold;
+}
+
+
+$size: 24px;
+
+.social-share-button {
+  .ssb-icon {
+    background-size: $size $size;
+    height: $size;
+    width: $size;
+  }
+}
+
+
+
+.footer {
+  background: #000059;
+  height: 45px;
+  bottom: 60%;
+  margin: 0; 
+  padding: 0;
+  position: relative;
+
+}
+

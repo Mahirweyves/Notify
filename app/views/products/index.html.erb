@@ -1,0 +1,109 @@
+<%= yield (:body_class) %>
+    <% if flash[:notice] %>
+      <div class="btn btn-sm btn-success notification is-success global-notification list-group mt-4 pt-3">
+        <p class="notice"><%= notice %></p>
+      </div>
+    <% end %>    
+
+    <% if flash[:alert] %>
+    <div class="btn btn-sm btn-danger notification is-danger global-notification list-group">
+      <p class="alert"><%= alert %></p>
+    </div>
+    <% end %>
+ 
+        <!--<li class="nav-item dropdown btn-primary mt-3 has text-dark">
+        <strong class="nav-link dropdown-toggle has text-white" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Search by category</strong>
+        <div class="dropdown-menu has text-center" aria-labelledby="dropdown01">
+    
+       <div class="mr-md-12">
+       <div class="card">
+       <div class="card-header">
+          Categories
+        </div>
+        <ul class="list-group has text-left bg-primary">
+
+        <#% @categories.each do |category| %>
+ 
+         <li>
+          <#%= link_to category.category, trades_path(:cate => category.id), class: "has text-white" %>
+
+         <#span class="badge badge-primary badge-pill has text-dark bg-warning"><#%= category.trades.count %></span>
+         </li>  
+        <#% end %>
+        </ul></li>
+        </div>
+        </div></div></div> -->
+
+
+<main role="main">
+
+  <div class="bg-light">
+  <div class="mr-md-auto">    
+  <div class="container ml-md-10">
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+     <%= image_tag('pic1.png', width:700, height:300) %>
+    </div>
+    <div class="carousel-item">
+      <%= image_tag('pic2.png', width:700, height:300) %>
+    </div>
+    <div class="carousel-item">
+     <%= image_tag('pic3.png', width:700, height:300) %>
+    </div>
+</div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div></div></div>
+  </div>
+   
+ <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron col-sm-12 text-center">
+      <h3 class="title is-1">Enjoy our free trials</h3>
+
+    <p class="subtitle is-5">Looking to get more clients for your products!</p>
+    </div>
+  </div>
+
+
+  <div class="container-fluid">
+  <div class="row">
+  <div class="row mb-3 pt-4 pb-4 mr-1">
+  <% @products.each do |product| %>
+   <div class="row">
+      <div style="width:25px;">
+      </div>
+   </div>
+  <div class="row ml-3">
+    <%= render product, product: product %>
+  </div>
+  <% end %>
+  </div>
+
+ 
+    </div></div></div></div>
+<!--<#%= render "trades/sidebar" %>
+  </div> -->
+
+</div>
+<div class="mb-5 pl-5 ml-5">
+<!--<#%= will_paginate @trades, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
+  </div>-->
+</main>
+
+
+
+
+
+
