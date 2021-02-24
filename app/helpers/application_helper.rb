@@ -17,7 +17,7 @@ module ApplicationHelper
   end
 
   def trade_author(trade)
-    user_signed_in? && current_user.id == trade.user_id
+    user_signed_in? && current_user.id == product.user_id
   end
 
 end
