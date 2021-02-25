@@ -9,6 +9,7 @@ class Product < ApplicationRecord
   validates :name, :description, :images, :address, :category,
         :company_name, :telephone_number, :price, presence: true
   
-   validates :name, uniqueness: { case_sensitive: false }
+  validates :images, presence: true, blob: { content_type: ['image/jpg', 'image/jpeg', 'image/png'], size_range: 1..2.megabytes }
+  validates :name, uniqueness: { case_sensitive: false }
    
 end
