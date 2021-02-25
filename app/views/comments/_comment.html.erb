@@ -1,0 +1,21 @@
+<div class="col-ml-auto">
+<div class="box border mb-4 pl-3 pr-5">
+  <article class="media">
+    <div class="media-content">
+      <div class="content">
+        <p>
+          <strong class="has text-white"><%= comment.name %>: </strong>
+          <%= comment.comment %>
+          <small class= "has text-primary"><%= time_ago_in_words(comment.created_at)%> ago</small>
+		<br/>
+        </p>
+      </div>
+    </div>
+
+   
+  </article>
+</div>
+
+
+
+

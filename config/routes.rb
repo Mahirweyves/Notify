@@ -9,7 +9,7 @@ Rails.application.routes.draw do
    get "products/terms_and_conditions", :to => "products#terms_and_conditions"
    get "products/privacy_policy", :to => "products#privacy_policy"
   resources :products do
-    resources :commons
+    resources :comments
     
 
   end

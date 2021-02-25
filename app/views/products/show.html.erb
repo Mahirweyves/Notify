@@ -99,9 +99,19 @@
     
 
      
-   
+ <section class="section comments col-md-5 mt-5 mb-5"><div class="row">
+    <div class="container-fluid">
+      <h3 class="subtitle is-5 has text-white"><strong><%= @product.comments.count %></strong> Comments</h3>
+        <%= render @product.comments %>
+        <div class="comment-form">
+            <h4 class="subtitle is-3 has text-white">Leave a reply</h4>
+            <hr />
+             <%= render 'comments/form' %>
+        </div>
+    </div></div>
+    </section> 
 
-       
+
     
 </div></div>
 </div></div></div>
