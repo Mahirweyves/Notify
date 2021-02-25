@@ -12,4 +12,18 @@ class CommentsController < ApplicationController
       @comment.destroy
       redirect_to product_path(@product)
   end
+
+  
+    private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_comment
+      @Commemt = Commemt.find(params[:id])
+    end
+
+    # Only allow a list of trusted parameters through.
+    def comment_params
+      params.require(:comment).permit(:name, :commen)
+    end
+
+
 end

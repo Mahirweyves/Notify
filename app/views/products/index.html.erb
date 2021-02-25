@@ -11,7 +11,7 @@
     </div>
     <% end %>
  
-        <!--<li class="nav-item dropdown btn-primary mt-3 has text-dark">
+        <li class="nav-item dropdown btn-primary mt-3 has text-dark">
         <strong class="nav-link dropdown-toggle has text-white" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Search by category</strong>
         <div class="dropdown-menu has text-center" aria-labelledby="dropdown01">
     
@@ -22,17 +22,17 @@
         </div>
         <ul class="list-group has text-left bg-primary">
 
-        <#% @categories.each do |category| %>
+        <% @categories.each do |category| %>
  
          <li>
-          <#%= link_to category.category, trades_path(:cate => category.id), class: "has text-white" %>
+          <%= link_to category.category, products_path(:cate => category.id), class: "has text-white" %>
 
-         <#span class="badge badge-primary badge-pill has text-dark bg-warning"><#%= category.trades.count %></span>
+         <span class="badge badge-primary badge-pill has text-dark bg-warning"><%= category.products.count %></span>
          </li>  
-        <#% end %>
+        <% end %>
         </ul></li>
         </div>
-        </div></div></div> -->
+        </div></div></div> 
 
 
 <main role="main">
@@ -93,13 +93,13 @@
 
  
     </div></div></div></div>
-<!--<#%= render "trades/sidebar" %>
-  </div> -->
+<%= render "products/category" %>
+  </div>
 
 </div>
 <div class="mb-5 pl-5 ml-5">
-<!--<#%= will_paginate @trades, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
-  </div>-->
+<%= will_paginate @trades, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
+  </div>
 </main>
 
 

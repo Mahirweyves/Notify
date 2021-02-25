@@ -12,9 +12,9 @@
         <% @categories.each do |category| %>
 
          <li>
-          <%= link_to category.category, trades_path(:cate => category.id), class: "has text-white" %>
+          <%= link_to category.category, products_path(:cate => category.id), class: "has text-white" %>
 
-         <span class="badge badge-primary badge-pill has text-dark bg-warning"><%= category.trades.count %></span>
+         <span class="badge badge-primary badge-pill has text-dark bg-warning"><%= category.products.count %></span>
          </li>  
         <% end %>
         </ul></li>

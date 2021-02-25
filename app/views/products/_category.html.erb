@@ -1,0 +1,28 @@
+<div class="col-md-4 mt-5 mb-5 column is-3 is-offset-1">
+  <p id="notice"><%= notice %></p>
+
+ <!--<#% if has_role?(:admin) %>-->
+
+  <h1 class="title is-5 has-text-grey-light">Categories</h1>
+<table>
+
+<strong><p>Category</p></strong>
+
+  <ul class="list">
+    <% @categories.each do |category| %>
+    <tr>
+<td><%= category.category %></td>
+        <td><%= link_to 'Show', category %></td>
+        <td><%= link_to 'Edit', edit_category_path(category) %></td>
+        <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+
+    <li><%= link_to category.category, category, class: "has text-dark" %></li>
+    <% end %>
+  </ul>
+</table>
+  <br/>
+
+    <%= link_to 'New Category', new_category_path, class:" btn btn-success mb-5" %>
+  <!--<#% end %>-->
+</div>

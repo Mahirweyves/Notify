@@ -1,0 +1,15 @@
+<div class="container-fluid">
+<%= simple_form_for(@category) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <%= f.label :category %>
+    <div class="field col-md-4">
+    <%= f.text_field :category, maxlength: 100, placeholder: 'Category', class:'form-control',required: true, autofocus: true, minlength: 100 %><br>
+    </div>
+
+  <div class="form-actions">
+     <%= f.submit "Create Category", class: "btn btn-success mt3 " %>
+  </div>
+<% end %>
+</div>

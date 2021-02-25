@@ -9,14 +9,14 @@
         </div>
         <ul class="list-group has text-left bg-dark">
 
-        <!--<#% @categories.each do |category| %>-->
+        <% @categories.each do |category| %>
 
-         <!--<li>
-          <#%= link_to category.category, trades_path(:cate => category.id), class: "has text-white" %>
+         <li>
+          <%= link_to category.category, products_path(:cate => category.id), class: "has text-white" %>
 
-         <span class="badge badge-primary badge-pill has text-dark bg-warning"><#%= category.trades.count %></span>
+         <span class="badge badge-primary badge-pill has text-dark bg-warning"><%= category.products.count %></span>
          </li>  
-        <#% end %>-->
+        <% end %>
         </ul></li>
         </div>
         </div></div></div>
@@ -39,7 +39,7 @@
       <div class="col-md-8 mt-5">
       
       <strong><h1 class="title pb3 border-bottom col-md-7 text-center has text-dark mt-5">Product info</h1></strong>
-      <!--<h2 class="lead">Category: <#%= @trade.category.category %></h2> -->      
+      <h2 class="lead">Category: <%= @product.category.category %></h2>      
 
     <h5 class="title is-1">Product name: <%= @product.name %></h5>
     <div>
