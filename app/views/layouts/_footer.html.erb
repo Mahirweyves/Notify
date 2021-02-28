@@ -4,24 +4,28 @@
 <footer class="footer navbar-fixed-bottom page-wrap-footer font-small blue pt-6 text-center fixed" >
  
  
-  <div class="row footer-bottom mt-5 pt-5 ml-3 has text-warning">
-  	<a class="has text-primary" href="/trades/terms_and_conditions">-Terms and conditions</a>/
-  	<a class="has text-primary" href="/trades/privacy_policy">-Privacy Policy</a>
+  <div class=" pt-1 has text-warning">
+  	<a class="has text-primary" href="/products/terms_and_conditions">-Terms and conditions</a>/
+  	<a class="has text-primary" href="/products/privacy_policy">-Privacy Policy</a>
     </br>
 
     <!--<p class="mr-md-auto">
             <#%= social_share_button_tag(@product, 'data-twitter-title' => 'Title for Twitter') %>
     </p>-->
 
-  	<p class="ml-md-auto"> 
-    Copyright &copy; 2020 Notify.rw | Designed by Mahirwe Yves </p>
+    
 
+  	
     
     <!--<p class="ml-md-auto">
             <#%= social_share_button_tag(@product, 'data-twitter-title' => 'Title for Twitter') %>-->
     </p>
-  </div>
   
-</div>
+
+<div class="footer navbar-fixed-bottom page-wrap-footer font-small blue pt-6 text-center fixed"><span class="mr-md-auto">
+            <%= social_share_button_tag(@product, 'data-twitter-title' => 'Title for Twitter') %></span>
+
+    </p><p class="mt-3"> 
+    Copyright &copy; 2020 Notify.rw | Designed by Mahirwe Yves </p>
 
 </footer>

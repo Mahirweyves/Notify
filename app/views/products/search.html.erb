@@ -1,0 +1,31 @@
+<li class="nav-item dropdown btn-primary mb-5 has text-dark">
+        <strong class="nav-link dropdown-toggle has text-white pl-5 mr-5" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Search by category</strong>
+        <div class="dropdown-menu has text-center" aria-labelledby="dropdown01">
+    
+       <div class="mr-md-12">
+       <div class="card">
+       <div class="card-header">
+          Categories
+        </div>
+        <ul class="list-group has text-left bg-dark">
+
+        <% @categories.each do |category| %>
+
+         <li>
+          <%= link_to category.category, products_path(:cate => category.id), class: "has text-white" %>
+
+         <span class="badge badge-primary badge-pill has text-dark bg-warning"><%= category.products.count %></span>
+         </li>  
+        <% end %>
+        </ul></li>
+        </div>
+        </div></div></div>
+
+<h3>Search Result</h3>  
+    <% @results.each do |result| %>  
+        <%= result.store.name %> <%= result.name %><br>  
+    <% end %>
+  
+  
+</div></div>
+</div></div>

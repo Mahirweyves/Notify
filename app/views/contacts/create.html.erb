@@ -1,0 +1,19 @@
+<%= yield (:body_class) %>
+    <% if flash[:notice] %>
+      <div class="btn btn-sm btn-success notification is-success global-notification mt-3">
+        <p class="notice"><%= notice %></p>
+      </div>
+    <% end %>
+
+    <% if flash[:alert] %>
+    <div class="btn btn-sm btn-danger notification is-danger global-notification">
+      <p class="alert"><%= alert %></p>
+    </div>
+    <% end %>
+    
+
+<h1 class="page_title mb-5 mt-5 has text-center">Hello!</h1>
+<div class="skinny_wrapper wrapper-padding pb-5 mb-5 mt-5">
+	<h1> Thank you for your message!</h1>
+	<h4>We will get back to you soon.</h4>
+</div>
