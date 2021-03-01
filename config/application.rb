@@ -1,4 +1,5 @@
 require_relative 'boot'
+require 'rails_autolink'
 
 require "rails"
 # Pick the frameworks you want:
