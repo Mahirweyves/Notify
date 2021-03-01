@@ -53,7 +53,7 @@
     <div class="row">
       <span class="mb-4 pl-4 col-md-6 has text-warning"> 
         <div class="card-content pt-1 pb-2 lead">
-        <div>Posted by: <%= @product.company_name %><a class="mt-1 mb-1 row text-right"></a>Address: <%= @product.address %><a class="mt-1 mb-1 row text-right"></a>Contacts: <%= @product.telephone_number %><a class="mt-1 row text-right"></a>Price: <%= @product.price %><a class="mt-1 row text-right"></a><!--</a>Website link: <#%= auto_link(@product.link) %>--></div></div></div>
+        <div>Posted by: <%= @product.company_name %><a class="mt-1 mb-1 row text-right"></a>Address: <%= @product.address %><a class="mt-1 mb-1 row text-right"></a>Contacts: <%= @product.telephone_number %><a class="mt-1 row text-right"></a>Price: <%= @product.price %><a class="mt-1 row text-right"></a></a>Website link: <%= auto_link(@product.link) %></div></div></div>
       </span>
     </div></div>
 
@@ -99,7 +99,7 @@
     
 
      
- <section class="section comments col-md-5 mt-5 mb-5"><div class="row">
+ <section class="section comments col-md-5 mt-5 mb-5 pb-5"><div class="row">
     <div class="container-fluid">
       <h3 class="subtitle is-5 has text-white"><strong><%= @product.comments.count %></strong> Comments</h3>
         <%= render @product.comments %>
